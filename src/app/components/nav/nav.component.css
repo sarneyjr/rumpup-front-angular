@@ -1,0 +1,28 @@
+.container {
+    height: 100%;
+    width: 100%;
+}
+
+.sidenav {
+    width: 13 rem;
+    color:rgb(237, 241, 241);
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 100%);
+}
+.sidenav i {
+    margin-right: 1rem;
+}
+
+.sidenav a {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    text-decoration: none;
+}
+
+.menu {
+    margin: 1rem auto auto 1rem;
+    color:aliceblue;
+    background: rgb(238,174,202);
+    background: linear-gradient(180deg, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 100%);
+}
