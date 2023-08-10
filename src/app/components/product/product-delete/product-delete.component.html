@@ -1,0 +1,40 @@
+
+
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Delete Product</h1>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='product.productName' 
+            name="productName" 
+            [disabled] = "true"
+             matInput>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='product.unitPrice' name="unitPrice" 
+            [disabled] = "true"
+             matInput>
+        </mat-form-field>
+
+        <mat-checkbox
+        [(ngModel)]="product.sellIndicator" 
+        name="sellIndicator"
+        [disabled] = "true" >Sell Indicator
+        </mat-checkbox>
+
+
+        <mat-form-field>
+            <mat-label>State</mat-label>
+            <mat-select  [(ngModel)]="product.state" name="state" [disabled] = "true">
+                <mat-option *ngFor="let stateOption of stateArray" [value]="stateOption">{{ stateOption }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <button (click)="delete()" class="fullWidth mat-elevation-z4" 
+        mat-flat-button color="primary">Delete Product</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" 
+        mat-stroked-button color="warn">Exit</button>
+    </form>
+</div>

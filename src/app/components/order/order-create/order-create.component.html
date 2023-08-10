@@ -1,0 +1,21 @@
+
+
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Create Order</h1>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='order.quantity' name="quantity" [formControl]="quantity" required matInput
+                placeholder="quantity" name="quantity" type="number">
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='order.discount' name="discount" [formControl]="discount" required matInput
+                placeholder="Discount" name="discount" type="number">
+        </mat-form-field>
+
+        <button (click)="create()" class="fullWidth mat-elevation-z4" mat-flat-button color="primary">Add
+            Order</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Exit</button>
+    </form>
+</div>

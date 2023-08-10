@@ -1,0 +1,35 @@
+
+
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Update Product</h1>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='product.productName' name="productName" [formControl]="productName" required matInput
+                placeholder="Product Name">
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='product.unitPrice' name="unitPrice" [formControl]="unitPrice" required matInput
+                placeholder="Unit Price" name="unitPrice" type="number">
+        </mat-form-field>
+
+        <mat-checkbox
+        [(ngModel)]="product.sellIndicator" name="sellIndicator">Sell Indicator
+        </mat-checkbox>
+
+
+        <mat-form-field>
+            <mat-label>State</mat-label>
+            <mat-select [(ngModel)]="product.state" [formControl]="state" name="state">
+                <mat-option *ngFor="let stateOption of stateArray" [value]="stateOption">{{ stateOption }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <button (click)="update()" class="fullWidth mat-elevation-z4" 
+        mat-flat-button color="primary">Update Product</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" 
+        mat-stroked-button color="warn">Exit</button>
+    </form>
+</div>

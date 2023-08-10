@@ -1,0 +1,17 @@
+.card {
+    position: relative;
+    width: 85%;
+    margin: auto;
+    height: 75vh; /* Ajuste a altura para ocupar toda a página */
+    background-image: url('https://i.pinimg.com/originals/54/b5/e4/54b5e461a747c36e4649edafbb9e606d.jpg');
+    background-size: contain;
+    background-position: center; /* Ajuste o posicionamento vertical da imagem */
+    z-index: -1;
+    filter: blur(5rem); /* Adicione o desfoque */
+  }
+  
+  .mat-card-header {
+    position: relative;
+    z-index: 1; /* Ajuste a ordem de sobreposição */
+  }
+  

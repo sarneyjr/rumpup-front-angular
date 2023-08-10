@@ -1,0 +1,38 @@
+
+
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.fullWidth {
+  width: 100%;
+}
+
+.mat-form-field {
+  margin-bottom: 20px;
+}
+
+.mat-checkbox {
+  margin-bottom: 10px;
+}
+
+.mat-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.mat-radio-button {
+  margin-bottom: 10px;
+}
+
+button {
+  margin-top: 10px;
+}

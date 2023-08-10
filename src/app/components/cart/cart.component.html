@@ -1,0 +1,60 @@
+<div class="container">
+  <h1>Cart</h1>
+
+  <div class="coupon-container">
+    <mat-form-field>
+      <input matInput [(ngModel)]="couponCode" placeholder="Enter coupon code">
+    </mat-form-field>
+    <button mat-button color="accent" (click)="applyCoupon()">Apply Coupon</button>
+  </div>
+  
+
+  <mat-table [dataSource]="finalList">
+    <ng-container matColumnDef="productName">
+      <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.productName }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="unitPrice">
+      <mat-header-cell *matHeaderCellDef> Unit Price </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.unitPrice }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="sellIndicator">
+      <mat-header-cell *matHeaderCellDef> Sell Indicator </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.sellIndicator }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="state">
+      <mat-header-cell *matHeaderCellDef> State </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ item.state }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="repetitionCount">
+      <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+      <mat-cell *matCellDef="let item"> {{ repetitionCount(item.id) }} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="subTotal">
+      <mat-header-cell *matHeaderCellDef> Subtotal </mat-header-cell>
+      <mat-cell *matCellDef="let item">
+        {{ calculateSubtotalForItem(item) | currency:'USD':'symbol':'1.2-2' }}
+      </mat-cell>
+    </ng-container>
+    
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+
+  <div class="total-checkout-container">
+    <div class="total-container">
+      <div class="total-label">Total Price:</div>
+      <div class="total-value">{{ calculateTotal() | currency:'BRL':'symbol-narrow' }}</div>
+    </div>
+    <button class="checkout-button" (click)="checkout()">Complete Order</button>
+  </div>
+
+</div>
+

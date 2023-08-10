@@ -1,0 +1,46 @@
+
+
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Update Customer</h1>
+
+        <mat-form-field class="fullWidth">
+            <mat-label>Customer Name</mat-label>
+            <input [(ngModel)]='customer.customerName' name="customerName" [formControl]="customerName" required matInput
+                placeholder="Customer Name">
+        </mat-form-field>
+
+
+        <mat-form-field class="fullWidth">
+            <mat-label>Customer Number</mat-label>
+            <input [(ngModel)]='customer.documentNumber' name="documentNumber" [formControl]="documentNumber" required matInput
+                placeholder="Document Number" name="documentNumber" type="number">
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <mat-label>Customer Status</mat-label>
+            <input [(ngModel)]='customer.customerStatus' name="customerStatus" [formControl]="customerStatus" required matInput
+                placeholder="Customer Status">
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Customer Type</mat-label>
+            <mat-select [(ngModel)]="customer.customerType" [formControl]="customerType" name="customerType">
+                <mat-option *ngFor="let customerTypeOption of customerTypeArray" [value]="customerTypeOption">{{ customerTypeOption }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <mat-label>Credi Score</mat-label>
+            <input [(ngModel)]='customer.creditScore' name="creditScore" [formControl]="creditScore" required matInput
+                placeholder="Credit Score" name="creditScore" type="number">
+        </mat-form-field>
+
+
+
+        <button (click)="update()" class="fullWidth mat-elevation-z4" 
+        mat-flat-button color="primary">Update Customer</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" 
+        mat-stroked-button color="warn">Exit</button>
+    </form>
+</div>

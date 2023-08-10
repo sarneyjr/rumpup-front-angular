@@ -1,37 +1,40 @@
 <mat-drawer-container class="container" autosize>
     <mat-drawer #drawer class="sidenav" mode="side">
         <mat-nav-list class="nav-list">
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="home">
                 <i class="material-icons">home</i>
                 Home
             </a>
-            <a mat-list-item routerLink="/">
+            <a mat-list-item routerLink="users">
                 <i class="material-icons">account_circle</i>
                 Account
             </a>
-            <a mat-list-item routerLink="/">
+
+            <a mat-list-item routerLink="products">
                 <i class="material-icons">store</i>
-                Store
+                Products
             </a>
             <a mat-list-item routerLink="/">
                 <i class="material-icons">add_shopping_cart</i>
                 My Orders
             </a>
-            <a mat-list-item routerLink="/" class="bottom-link">
+            <a mat-list-item routerLink="/">
                 <i class="material-icons">code</i>
                 GitHub
             </a>
-            <a mat-list-item routerLink="/" class="bottom-link">
+            <a mat-list-item (click)="logout()">
                 <i class="material-icons">logout</i>
-                Logot
+                Logout
             </a>
         </mat-nav-list>
     </mat-drawer>
 
-    <div class="sidenav-content"> 
-        <button class ="menu mat-elevation-z8" (click)= "drawer.toggle()" mat-icon-button>
-        <mat-icon>menu</mat-icon>
+    <div class="sidenav-content">
+        <app-header></app-header>
+        <button class="menu mat-elevation-z8" (click)="drawer.toggle()" mat-icon-button>
+            <mat-icon>menu</mat-icon>
         </button>
+        <router-outlet></router-outlet>
     </div>
 
 </mat-drawer-container>

@@ -1,0 +1,58 @@
+/* Add this to your cart.component.css file */
+
+.container {
+    margin: 20px;
+  }
+  
+  .card {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+  }
+  
+  .card h1 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .total-checkout-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .total-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .total-label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .total-value {
+    font-size: 24px;
+    color: #0066cc;
+  }
+  
+  .checkout-button {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 2rem; /* Add this line to set the margin */
+    margin-top: 1rem;
+  }
+  
+  .checkout-button:hover {
+    background-color: #0052a3;
+  }
+  

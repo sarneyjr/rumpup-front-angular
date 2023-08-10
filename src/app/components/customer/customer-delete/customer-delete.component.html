@@ -1,0 +1,46 @@
+
+
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Delete Customer</h1>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='customer.customerName' 
+            name="customerName" 
+            [disabled] = "true"
+             matInput>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='customer.documentNumber' name="documentNumber" 
+            [disabled] = "true"
+             matInput>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='customer.customerStatus' 
+            [disabled] = "true"
+             matInput>
+        </mat-form-field>
+
+        <mat-form-field class="fullWidth">
+            <input [(ngModel)]='customer.creditScore' 
+            name="creditScore" 
+            [disabled] = "true"
+             matInput>
+        </mat-form-field>
+
+        <mat-form-field>
+            <mat-label>Customer Type</mat-label>
+            <mat-select  [(ngModel)]="customer.customerType" name="customerType" [disabled] = "true">
+                <mat-option *ngFor="let customerTypeOption of customerTypeArray" [value]="customerTypeOption">{{ customerTypeOption }}</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+
+        <button (click)="delete()" class="fullWidth mat-elevation-z4" 
+        mat-flat-button color="primary">Delete Customer</button>
+        <button routerLink="../../" class="fullWidth mat-elevation-z4" 
+        mat-stroked-button color="warn">Exit</button>
+    </form>
+</div>

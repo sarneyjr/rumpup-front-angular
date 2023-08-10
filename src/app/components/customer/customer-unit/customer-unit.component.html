@@ -1,0 +1,58 @@
+<div class="container mat-elevation-z8">
+  <form class="form">
+    <h1 class="fullWidth">Customer</h1>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Customer Name</mat-label>
+        <input [(ngModel)]='customer.customerName' name="customerName" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!customer.customerName">This field is empty</p>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Document Number</mat-label>
+        <input [(ngModel)]='customer.documentNumber' name="documentNumber" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!customer.documentNumber">This field is empty</p>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Customer Status</mat-label>
+        <input [(ngModel)]='customer.customerStatus' name="customerStatus" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!customer.customerStatus">This field is empty</p>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Credit Score</mat-label>
+        <input [(ngModel)]='customer.creditScore' name="creditScore" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!customer.creditScore">This field is empty</p>
+    </div>
+
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Customer Type</mat-label>
+        <mat-select [(ngModel)]="customer.customerType" name="customerType" [disabled]="true">
+          <mat-option *ngFor="let customerTypeOption of customerTypeArray" [value]="customerTypeOption">{{ customerTypeOption }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!customer.customerType">This field is empty</p>
+    </div>
+
+
+    <button mat-button [routerLink]="['/customers/update', customer.id]" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Update</button>
+    <button mat-button [routerLink]="['/customers/create/',customer.userId]" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Create</button>
+    <button mat-button [routerLink]="['/customers/delete', customer.id]" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Delete</button>
+
+
+    <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="Warn">Exit</button>
+  </form>
+</div>
+
+

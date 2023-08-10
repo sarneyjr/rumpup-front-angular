@@ -1,0 +1,31 @@
+<div class="login-container">
+  
+  <mat-card class="login-card">
+    <mat-card-header>
+      <mat-card-title class="geek-text">Login</mat-card-title>
+    </mat-card-header>
+
+    <mat-card-content>
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="creds.email" name="username" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="creds.password" name="password" required>
+      </mat-form-field>
+
+      <div class="error-message" *ngIf="invalidCredentials">
+        Invalid username or password.
+      </div>
+    </mat-card-content>
+
+    <div class="buttons-container">
+      <button mat-raised-button color="accent" (click)="logar()">Login</button>
+      <button routerLink="/users/create" mat-raised-button color="accent" class="mat-elevation-z8" >Sign Up</button>
+    </div>
+
+  </mat-card>
+</div>
+

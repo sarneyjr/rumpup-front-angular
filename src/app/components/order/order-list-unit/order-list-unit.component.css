@@ -1,0 +1,33 @@
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+  }
+
+/* Estilo para aumentar o tamanho do ícone */
+.larger-icon mat-icon {
+    /* Define o tamanho do ícone. Você pode ajustar o valor conforme necessário */
+    font-size: 303px;
+  }
+
+.buttom {
+  width: 100%;
+}
+
+h1 {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.edit {
+  color: rgb(43, 178, 220);
+}
+
+.delete {
+  color: rgb(255, 0, 0);
+}
+  

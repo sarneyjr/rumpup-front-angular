@@ -1,0 +1,134 @@
+.toolbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.center-container {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.cart-container {
+  position: relative;
+}
+
+.cart-button {
+  margin-left: 20px;
+}
+
+.cart-icon {
+  color: white;
+  font-size: 24px;
+}
+
+.mat-menu-panel {
+  background-color: #f2f2f2;
+  padding: 10px;
+  min-width: 200px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+  margin-bottom: 8px;
+}
+
+.item-link {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.btn-remove-cart {
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn-remove-cart mat-icon {
+  margin-right: 8px;
+}
+
+.brand-link {
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+}
+
+.geek-text {
+
+  color: white;
+  font-size: 24px;
+  text-decoration: none;
+  line-height: 1.5;
+  /* Ajuste o valor conforme necessário */
+  letter-spacing: 0.2em;
+  /* Ajuste o valor conforme necessário */
+  font-size: 3rem;
+  /* Ajuste o tamanho da fonte conforme necessário */
+  font-family: 'Press Start 2P', cursive;
+  /* Substitua por uma fonte geek de sua escolha */
+  color: rgb(255, 255, 255);
+  text-align: center;
+  text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
+  /* Ajuste os valores para controlar o deslocamento e a intensidade da borda */
+  -webkit-text-stroke: 0px black;
+  /* Ajuste a largura e a cor da borda conforme necessário */
+  z-index: 1;
+}
+
+/* Add this to your existing CSS or stylesheet */
+
+.total-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #3b3305; /* Highlight color */
+  padding: 8px;
+}
+
+.total-label {
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.total-value {
+  font-weight: bold;
+}
+
+.btn-remove-cart {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+}
+
+.btn-remove-cart mat-icon {
+  font-size: 24px;
+  color: #FF5733; /* Customize color */
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+
+

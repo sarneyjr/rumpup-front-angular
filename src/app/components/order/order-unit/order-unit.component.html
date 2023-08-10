@@ -1,0 +1,58 @@
+<!-- <div class="container mat-elevation-z8">
+  <form class="form">
+    <h1 class="fullWidth">Order</h1>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Order Name</mat-label>
+        <input [(ngModel)]='order.orderName' name="orderName" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!order.orderName">This field is empty</p>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Document Number</mat-label>
+        <input [(ngModel)]='order.documentNumber' name="documentNumber" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!order.documentNumber">This field is empty</p>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Order Status</mat-label>
+        <input [(ngModel)]='order.orderStatus' name="orderStatus" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!order.orderStatus">This field is empty</p>
+    </div>
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Credit Score</mat-label>
+        <input [(ngModel)]='order.creditScore' name="creditScore" [disabled]="true" matInput>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!order.creditScore">This field is empty</p>
+    </div>
+
+
+    <div class="form-field">
+      <mat-form-field class="fullWidth">
+        <mat-label>Order Type</mat-label>
+        <mat-select [(ngModel)]="order.orderType" name="orderType" [disabled]="true">
+          <mat-option *ngFor="let orderTypeOption of orderTypeArray" [value]="orderTypeOption">{{ orderTypeOption }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <p class="empty-message" *ngIf="!order.orderType">This field is empty</p>
+    </div>
+
+
+    <button mat-button [routerLink]="['/orders/update', order.id]" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Update</button>
+    <button mat-button [routerLink]="['/orders/create/',order.userId]" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Create</button>
+    <button mat-button [routerLink]="['/orders/delete', order.id]" class="fullWidth mat-elevation-z4" mat-stroked-button color="primary">Delete</button>
+
+
+    <button routerLink="../../" class="fullWidth mat-elevation-z4" mat-stroked-button color="Warn">Exit</button>
+  </form>
+</div>
+
+ -->

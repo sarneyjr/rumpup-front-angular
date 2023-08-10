@@ -1,0 +1,62 @@
+
+<div class="toolbar-container">
+  <mat-toolbar class="mat-toolbar">
+
+    <div class="center-container">
+      <a routerLink="home" class="geek-text">Geek Store</a>
+    </div>
+    <div class="cart-container">
+      <button mat-icon-button [matMenuTriggerFor]="menu" class="cart-button">
+        <mat-icon [matBadge]="1" matBadgeColor="warn" class="cart-icon">shopping_cart</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu" class="mat-menu-panel" >
+        <div class="menu-content">
+        
+          <mat-table [dataSource]="finalList">
+            <ng-container matColumnDef="productName">
+              <mat-header-cell *matHeaderCellDef> Product Name </mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{ item.productName }} </mat-cell>
+            </ng-container>
+        
+            <ng-container matColumnDef="unitPrice">
+              <mat-header-cell *matHeaderCellDef> Unit Price </mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{ item.unitPrice }} </mat-cell>
+            </ng-container>
+      
+            <ng-container matColumnDef="repetitionCount">
+              <mat-header-cell *matHeaderCellDef> Quantity </mat-header-cell>
+              <mat-cell *matCellDef="let item"> {{ repetitionCount(item.id) }} </mat-cell>
+            </ng-container>
+        
+
+            
+        
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+          </mat-table>
+        
+        
+          <div class="total-checkout-container">
+            <div class="total-container">
+              <div class="total-label">Total Price:</div>
+              <div class="total-value">{{ calculateTotal() | currency:'BRL':'symbol-narrow' }}</div>
+            </div>
+          </div>
+
+
+
+            <div class="pt-3 flex justify-between">
+              <button class="btn-remove-cart">
+                <mat-icon>remove_shopping_cart</mat-icon>
+              </button>
+            </div>
+
+            <div class="menu-item">
+              <a routerLink="/cart" class="item-link">View Cart</a>
+            </div>
+            
+        </div>
+      </mat-menu>
+    </div>
+  </mat-toolbar>
+</div>

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.card {
+    position: relative;
+    width: 100%;
+    margin: auto;
+    height: 100vh; /* Ajuste a altura para ocupar toda a página */
+    background-image: url('https://i.pinimg.com/originals/54/b5/e4/54b5e461a747c36e4649edafbb9e606d.jpg');
+    background-size: cover;
+    background-position: center; /* Ajuste o posicionamento vertical da imagem */
+    z-index: -1;
+}
+
+.mat-card-header {
+    position: relative;
+    z-index: 1; /* Ajuste a ordem de sobreposição */
+}
+
+
+.geek-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 70%;
+    width: 70%;
+    transform: translate(-50%, -50%);
+    line-height: 1.5;
+    /* Ajuste o valor conforme necessário */
+    letter-spacing: 0.2em;
+    /* Ajuste o valor conforme necessário */
+    font-size: 3rem;
+    /* Ajuste o tamanho da fonte conforme necessário */
+    font-family: 'Press Start 2P', cursive;
+    /* Substitua por uma fonte geek de sua escolha */
+    color: rgb(255, 255, 255);
+    text-align: center;
+    
+    /* Ajuste os valores para controlar o deslocamento e a intensidade da borda */
+    -webkit-text-stroke: 0px black;
+    /* Ajuste a largura e a cor da borda conforme necessário */
+    z-index: 1;
+    font-size: 3rem;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.5);
+    background: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #00ff00, #0000ff, #9900ff, #ff00ff);
+    background-size: 600% 600%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: rainbow 8s linear infinite;
+}
+
+/* Define the rainbow gradient animation */
+@keyframes rainbow {
+    0%, 100% { background-position: 0 0; }
+    14.28% { background-position: 14.28% 0; }
+    28.56% { background-position: 28.56% 0; }
+    42.84% { background-position: 42.84% 0; }
+    57.12% { background-position: 57.12% 0; }
+    71.4% { background-position: 71.4% 0; }
+    85.68% { background-position: 85.68% 0; }
+  }

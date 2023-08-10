@@ -5,10 +5,11 @@
 
 .sidenav {
     width: 13 rem;
-    color:rgb(237, 241, 241);
-    background: rgb(238,174,202);
-    background: linear-gradient(180deg, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 100%);
+    color: rgb(237, 241, 241);
+    background: rgb(63, 94, 251);
+    background: linear-gradient(180deg, rgba(63, 94, 251, 1) 0%, rgba(70, 187, 252, 1) 100%);
 }
+
 .sidenav i {
     margin-right: 1rem;
 }
@@ -22,7 +23,23 @@
 
 .menu {
     margin: 1rem auto auto 1rem;
-    color:aliceblue;
-    background: rgb(238,174,202);
-    background: linear-gradient(180deg, rgba(238,174,202,1) 40%, rgba(148,187,233,1) 100%);
+    color: aliceblue;
+    background: rgb(63, 94, 251);
+    background: linear-gradient(180deg, rgba(63, 94, 251, 1) 0%, rgba(70, 187, 252, 1) 100%);
+}
+
+.sidenav i {
+    margin-right: 1rem;
+}
+
+.menu {
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    margin: 1rem auto auto 1rem;
+    color: aliceblue;
+    background: rgb(63, 94, 251);
+    background: linear-gradient(180deg, rgba(63, 94, 251, 1) 0%, rgba(70, 187, 252, 1) 100%);
+    z-index: 3;
+    /* Ajuste a ordem de sobreposição para estar acima do menu */
 }

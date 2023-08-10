@@ -1,0 +1,38 @@
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Create Address</h1>
+
+    <mat-form-field>
+        <mat-label for="street">Street</mat-label>
+        <input matInput id="street" [(ngModel)]="address.street" name="street" required placeholder="street">
+      </mat-form-field>
+  
+      <mat-form-field class="fullWidth">
+        <mat-label for="houseNumber">House Number</mat-label>
+        <input matInput id="houseNumber" [(ngModel)]="address.houseNumber" name="houseNumber" required placeholder="houseNumber" type="number">
+      </mat-form-field>
+  
+      <mat-form-field class="fullWidth">
+        <mat-label for="neigborhood">Neighborhood</mat-label>
+        <input matInput id="neigborhood" [(ngModel)]="address.neigborhood" name="neigborhood" required placeholder="neigborhood">
+      </mat-form-field>
+  
+      <mat-form-field class="fullWidth">
+        <mat-label for="zipCode">Zip Code</mat-label>
+        <input matInput id="zipCode" [(ngModel)]="address.zipCode" name="zipCode" required placeholder="zipCode" type="number">
+      </mat-form-field>
+  
+      <mat-form-field class="fullWidth">
+        <mat-label for="country">Country</mat-label>
+        <input matInput id="country" [(ngModel)]="address.country" name="country" required placeholder="country">
+      </mat-form-field> 
+  
+      <button (click)="create()" class="fullWidth mat-elevation-z4" mat-flat-button color="accent">Add
+        Address</button>
+      <button routerLink="../" class="fullWidth mat-elevation-z4" mat-stroked-button color="warn">Exit</button>
+    </form>
+    </div>
+
+
+
+  
